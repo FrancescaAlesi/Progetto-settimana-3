@@ -10,7 +10,8 @@
     <body>
         <header id="header">
             <h1>Pellicola</h1>
-            <p>Aggiungi i film che hai visto o che vorresti vedere.</p>
+            <p id="paragrafo">Aggiungi i film che hai visto o che vorresti vedere.</p>
+            <button type="button" id="pulsante" title="Cambia tema"></button>
         </header>
 
         <main>
@@ -18,9 +19,9 @@
                 <h2>Aggiungi un film</h2>
                 <form>
                     <div class="aggiunta">
-      		            <input type="text" id="nuovo-film" placeholder="Titolo"/>
-                        <input type="text" id="nuovo-film" placeholder="Regista"/>
-                        <input type="number" id="nuovo-film" placeholder="Anno"/>
+      		            <input type="text" id="nuovo-titolo" placeholder="Titolo"/>
+                        <input type="text" id="nuovo-regista" placeholder="Regista"/>
+                        <input type="number" id="nuovo-anno" placeholder="Anno"/>
                         <select id="scelta">
                             <option value="">Scelta</option>
                             <option value="visto">Visto</option>

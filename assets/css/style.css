@@ -16,16 +16,6 @@ body {
   margin: 0 auto;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 button {
   font-family: inherit;
   cursor: pointer;
@@ -33,8 +23,12 @@ button {
   background: none;
 }
 
-#notifica {
-  display: none;
+input, select {
+  padding: 10px 12px;
+  font-family: inherit;
+  border: 1px solid #868585;
+  border-radius: 8px;
+  background: #ffffff;
 }
 
 /* Header */
@@ -44,16 +38,43 @@ button {
   padding-bottom: 16px;
 }
 
-h1 {
+h1, h2{
   font-size: 32px;
   font-weight: 800;
-  margin-bottom: 8px;
   color: #fd02e8;
+  margin-bottom: 14px;
 }
 
-h2 {
-  color: #e201cf;
+h1, h2, #paragrafo{
   margin-bottom: 14px;
+}
+
+/* cambio tema */
+#pulsante {
+  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #868585;
+  transition: all 0.3s ease;
+}
+
+.bottone-filtro,
+#bottone-aggiungi {
+  padding: 8px 18px;
+  background-color: #ffffff;
+  border: 1px solid #868585;
+  border-radius: 6px;
+  color: #000000;
+  font-size: 14px;
+}
+
+#pulsante:hover,
+#bottone-aggiungi:hover,
+.bottone-filtro:hover,
+.bottone-filtro.attivo {
+  background-color: #fd02e8;
+  color: #ffffff;
+  border-color: #fd02e8;
 }
 
 /* Form */
@@ -78,13 +99,7 @@ h2 {
 
 #scelta {
   width: 15%;
-  display: inline-block;
-  vertical-align: middle;
-  padding: 10px 12px;
-  border: 1px solid #868585;
-  border-radius: 8px;
   font-size: 14px;
-  background: #ffffff;
 }
 
 #nuovo-titolo {
@@ -102,26 +117,13 @@ h2 {
 #nuovo-stato {
   width: 14%;
   padding: 10px 8px;
-  border: 1px solid #868585;
-  border-radius: 8px;
-  background: #ffffff;
 }
 
 #bottone-aggiungi {
   width: 10%;
   margin-right: 0;
   padding: 10px 0;
-  background-color: white;
-  border: 1px solid #868585;
-  border-radius: 6px;
-  cursor: pointer;
-  color: #000000;
   text-align: center;
-}
-
-#bottone-aggiungi:hover {
-  background-color: #fd02e8;
-  color: #ffffff;
 }
 
 input {
@@ -151,35 +153,11 @@ input {
   width: 36%;
   display: inline-block;
   vertical-align: middle;
-  padding: 10px 12px;
-  border: 1px solid #868585;
-  border-radius: 8px;
   font-size: 14px;
-  background: #ffffff;
 }
 
-/* Filtri a pulsante */
 .filtri {
   margin-bottom: 18px;
-}
-
-.bottone-filtro {
-  display: inline-block;
-  margin-right: 8px;
-  margin-bottom: 10px;
-  padding: 8px 18px;
-  background-color: white;
-  border: 1px solid #868585;
-  border-radius: 6px;
-  font-size: 14px;
-  color: #000000;
-}
-
-.bottone-filtro:hover,
-.bottone-filtro.attivo {
-  background-color: #fd02e8;
-  color: #ffffff;
-  border-color: #fd02e8;
 }
 
 /* Statistiche */
@@ -225,7 +203,6 @@ li {
   line-height: 24px;
 }
 
-/* film è visto */
 li.film-visto .info-film {
   text-decoration: line-through;
   opacity: 0.6;
@@ -273,4 +250,38 @@ footer {
   border-top: 1px solid #e0e0e0;
   color: #777777;
   text-align: center;
+}
+
+/* tema scuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode #header,
+body.dark-mode footer,
+body.dark-mode .statistiche {
+  border-color: #333333;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode #bottone-aggiungi,
+body.dark-mode .bottone-filtro,
+body.dark-mode #pulsante {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border-color: #444444;
+}
+
+body.dark-mode li {
+  border-bottom-color: #333333;
+}
+
+body.dark-mode .barra {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode li button.elimina {
+  background-color: transparent;
 }

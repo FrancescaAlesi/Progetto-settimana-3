@@ -52,7 +52,7 @@ const formFilm = document.querySelector(".form form");
 const inputsNuovoFilm = document.querySelectorAll(".aggiunta input"); 
 const selectStato = document.querySelector(".aggiunta select");
 const inputCerca = document.querySelector("#cerca");
-const selectOrdinamento = document.querySelector("#visione");
+const selectOrdinamento = document.querySelector("#ordinamento");
 const bottoniFiltro = document.querySelectorAll(".filtri button");
 const contatoreTotale = document.querySelector("#contatore-totale");
 const contatoreVisti = document.querySelector("#conteggio-visti");
@@ -77,6 +77,36 @@ function render() {
         filmElaborati = filmElaborati.filter(
             (film) => film.titoloFilm.toLowerCase().includes(q) || (film.regista && film.regista.toLowerCase().includes(q))
         );
+    }
+
+    if (criterioOrdinamento !== "") {
+        filmElaborati.sort((a, b) => {
+            switch (criterioOrdinamento) {
+                case "anno-cresc":
+                    return Number(a.annoUscita) - Number(b.annoUscita);
+
+                case "anno-decresc":
+                    return Number(b.annoUscita) - Number(a.annoUscita);
+                    
+                case "titolo-az":
+                    return a.titoloFilm.localeCompare(b.titoloFilm);
+                    
+                case "titolo-za":
+                    return b.titoloFilm.localeCompare(a.titoloFilm);
+                    
+                default:
+                    return 0;
+            }
+        });
+    }
+
+    if (filmElaborati.length === 0) {
+        const liVuoto = document.createElement("li");
+        liVuoto.textContent = "Nessun film trovato";
+        listaFilm.appendChild(liVuoto);
+        liVuoto.style.borderBottom = "none";
+        aggiornaStatistiche();
+        return;
     }
 
     filmElaborati.forEach((film) => {
@@ -189,6 +219,13 @@ if (inputCerca) {
     });
 }
 
+if (selectOrdinamento) {
+    selectOrdinamento.addEventListener("change", (e) => {
+        criterioOrdinamento = e.target.value;
+        render();
+    });
+}
+
 bottoniFiltro.forEach((btn) => {
     btn.addEventListener("click", () => {
         bottoniFiltro.forEach((b) => b.classList.remove("attivo"));
@@ -205,5 +242,24 @@ bottoniFiltro.forEach((btn) => {
         render();
     });
 });
+
+if (localStorage.getItem("tema") === "dark") {
+    document.body.classList.add("dark-mode");
+    if (pulsanteTema) {
+        pulsanteTema.textContent = "Tema chiaro";
+    }
+} else if (pulsanteTema) {
+    pulsanteTema.textContent = "Tema scuro";
+}
+
+if (pulsanteTema) {
+    pulsanteTema.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        const isDark = document.body.classList.contains("dark-mode");
+        localStorage.setItem("tema", isDark ? "dark" : "light");
+        pulsanteTema.textContent = isDark ? "Tema chiaro" : "Tema scuro";
+    });
+}
 
 render();
