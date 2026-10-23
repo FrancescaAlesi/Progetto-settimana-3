@@ -1,33 +1,32 @@
 # Progetto-settimana-3
 creazione di una pagina web
 
-
-# Pellicola - Personal Media Tracker
-
-Pellicola è una pagina web progettata per organizzare la propria collezione personale di intrattenimento. Permette di catalogare libri e film, eliminare contenuti dal catalogo e monitorare statistiche dettagliate sulle proprie abitudini di lettura e visione.
+# Pellicola - Web App
+Pellicola è una web application interattiva e reattiva progettata per gestire la propria lista di film: consente di tenere traccia delle pellicole già viste e di quelle ancora da vedere, calcolando statistiche e percentuali di completamento in tempo reale.
 
 ## Funzionalità Principali
-
-- Navigazione: Filtra rapidamente l'intera libreria selezionando tra `Tutti`, `Libri`, `Film` e `Statistiche` nella parte superiore.
-- Schede Dettaglio: Ogni card include titolo, anno, autore o regista, valutazione con stelle, categoria e note personali.
-- Eliminazione Elementi: Possibilità di eliminare singole schede direttamente dal catalogo.
-- Pannello Statistiche Laterale:
-  - Conteggio totale di libri letti e film visti aggiornato in tempo reale ad ogni aggiunta o rimozione.
-  - Calcolo e visualizzazione grafica della media dei voti.
-- Aggiunta Nuovi Elementi: Modulo laterale per inserire titolo, autore/regista, anno, categoria (`Libri` o `Film`), visione(`Visto` o `Da vedere`) e lettura visione(`Letto` o `Da leggere`).
-- Barra di Ricerca Diretta: Cerca all'istante all'interno del catalogo digitando il nome dell'opera o dell'autore.
-
+- Gestione Film:
+  - Aggiunta di nuovi film con indicazione di titolo, regista, anno di uscita e stato iniziale (Visto / Da vedere).
+  - Modifica rapida dello stato tramite checkbox interattivo direttamente dalla lista.
+  - Rimozione selettiva dei singoli film dalla lista.
+- Filtri e Ricerca in Tempo Reale:
+  - Filtro per stato: `Tutti`, `Solo visti`, `Solo da vedere`.
+  - Barra di ricerca istantanea per titolo o nome del regista.
+  - Ordinamento dinamico per:
+    - Anno di uscita (crescente e decrescente)
+    - Titolo (A-Z e Z-A)
+- Dashboard Statistiche:
+  - Contatori aggiornati in tempo reale (film totali, film visti, film da vedere).
+  - Barra di avanzamento dinamica con percentuale di completamento calcolata automaticamente.
+- Dark Mode:
+  - Cambio tema (Chiaro / Scuro) con salvataggio delle preferenze utente nel `localStorage` del browser.
 
 ## Stack Tecnologico
-
-- HTML5:
-  - Markup semantico (`<header>`, `<nav>`, `<main>`, `<aside>`, `<section>`, `<article>`).
-  - Moduli interattivi con `<input>`, `<select>` e pulsanti accessibili.
-- **CSS3:**
-  - Impaginazione classica tramite Box Model, proprietà `display: inline-block`, `float`.
-  - Effetti di transizione ed `hover` interattivi su schede, pulsanti e icone.
+- HTML5: Struttura semantica dell'interfaccia (`header`, `main`, `section`, `footer`).
+- CSS3: Stile personalizzato, layout fluido, gestione variabili tema (Light / Dark Mode) e animazioni CSS.
 - JavaScript (ES6+):
-  - Manipolazione dinamica del DOM (creazione, aggiornamento e rimozione di elementi tramite `remove()`).
-  - Gestione dello stato dell'applicazione tramite array di oggetti.
-  - Metodi per la ricerca, il filtraggio e l'eliminazione dei dati (`splice`, `filter`, `includes`).
-  - Gestione degli eventi di input, click (inclusa la rimozione) e submit sui form.
+  - Manipolazione dinamica del DOM.
+  - Metodi avanzati per gli array (`filter`, `sort`, `map`, `splice`, `indexOf`, `find`).
+  - Gestione eventi e persistenza impostazioni tema con `localStorage`.
+- Librerie Esterne:
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css  per le icone.
