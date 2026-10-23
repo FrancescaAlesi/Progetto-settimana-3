@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,90 +8,76 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
     <body>
-        <header>
-            <!-- Titolo dell'app + sottotitolo + button tema chiaro/scuro -->
+        <header id="header">
             <h1>Pellicola</h1>
-            <h2>Aggiungi i film che hai visto o che vorresti vedere.</h2>
-            <button>Tema chiaro</button>
-            <button>Tema scuro</button>
+            <p>Aggiungi i film che hai visto o che vorresti vedere.</p>
         </header>
 
         <main>
             <section class="form">
-                <!-- Form di inserimento di nuovi elementi -->
                 <h2>Aggiungi un film</h2>
                 <form>
-                    <input type="text" id="titolo" placeholder="Titolo" required />
-                    <input type="text" id="regista" placeholder="Regista" required />
-
-                    <p>
-                        <input type="number" id="anno" placeholder="Anno" required />
-
-                        <select id="visione">
-                            <option value=""></option>
-                            <option value="Visto">Visto</option>
-                            <option value="Da vadere">Da vedere</option>
+                    <div class="aggiunta">
+      		            <input type="text" id="nuovo-film" placeholder="Titolo"/>
+                        <input type="text" id="nuovo-film" placeholder="Regista"/>
+                        <input type="number" id="nuovo-film" placeholder="Anno"/>
+                        <select id="scelta">
+                            <option value="">Scelta</option>
+                            <option value="visto">Visto</option>
+                            <option value="da-vadere">Da vedere</option>
                         </select>
-                    </p>
-
-                    <p>
-                        <i class="fa-solid fa-plus"></i>
-                        <button type="submit">Aggiungi</button>
-                    </p>
+                        <button type="submit" id="bottone-aggiungi">
+                            <i id="icona" class="fa-solid fa-plus"></i> 
+                            Aggiungi
+                        </button>
+    	            </div>
                 </form>
             </section>
 
             <section class="controlli">
-                <!-- Ricerca live, filtro (select), ordinamento -->
-                <p>
+                <div class="cerca">
                     <input type="text" id="cerca" placeholder="Cerca per titolo o regista" />
-                </p>
-                
-                <p>
-                    <select id="visione">
-                        <option value=""></option>
-                        <option value="Tutto">Anno crescente</option>
-                        <option value="Tutto">Anno decrescente</option>
-                        <option value="Visti">Titolo: A-Z </option>
-                        <option value="Da vadere">Titolo: Z-A</option>
+                    <select id="ordinamento">
+                        <option value="">Ordinamento predefinito</option>
+                        <option value="anno-cresc">Anno crescente</option>
+                        <option value="anno-decresc">Anno decrescente</option>
+                        <option value="titolo-az">Titolo: A-Z </option>
+                        <option value="titolo-za">Titolo: Z-A</option>
                     </select>
-                </p>
+                </div>
 
                 <div class="filtri">
-      		        <button id="bottone">Tutti</button>
-      		        <button id="bottone">Solo visti</button>
-      		        <button id="bottone">Solo da vedere</button>
+      		        <button type="button" class="bottone-filtro attivo" id="tutti">Tutti</button>
+      		        <button type="button" class="bottone-filtro" id="visti">Solo visti</button>
+      		        <button type="button" class="bottone-filtro" id="da-vedere">Solo da vedere</button>
     	        </div>
                 
             </section>
 
             <section class="statistiche">
-                <!-- Conteggi e/o barre orizzontali -->
                 <h2>Statistiche</h2>
       
                 <div>
                     <div>
-                        <p>Totale: </p>
-                        <p>Libri letti: </p>
-                        <p>Libri da leggere: </p>
+                        <p class="conteggio-totale">Tutti: <span id="contatore-totale">0</span></p>
+                        <p class="conteggio-visti">Film visti: <span id="conteggio-visti">0</span></p>
+                        <p class="conteggio-da-vedere">Film da vedere: <span id="conteggio-da-vedere">0</span></p>
                     </div>
 
                     <div class="barra">
-                        <div class="barra-fill" style="width: 60%;"></div>
+                       <div class="barra-fill" id="barra-percentuale" style="width: 0%;"></div>
                     </div>
                 </div>
             </section>
 
             <section class="lista">
-                <!-- Container che render() ricostruisce a ogni cambio di stato -->
+                <ul id="lista-film"></ul>
             </section>
 
-            <div id="notifica"></div>
         </main>
 
         <footer>
-            <!-- Autore, anno -->
-            <p>2026 Francesca Alesi - Costruito a mano durante la prima settimana di corso Epicode</p>
+            <p>Organizzare di film - Epicode Full Stack AI 2026</p>
         </footer>
 
         <script src="assets/js/script.js"></script>

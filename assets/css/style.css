@@ -5,10 +5,15 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  color: #111;
-  background: #fff;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  line-height: 1.6;
+  color: #000000;
+  background: #ffffff;
+  padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 img {
@@ -32,4 +37,240 @@ button {
   display: none;
 }
 
-/* Scrivi qui sotto i tuoi stili */
+/* Header */
+#header {
+  margin-bottom: 28px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 16px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #fd02e8;
+}
+
+h2 {
+  color: #e201cf;
+  margin-bottom: 14px;
+}
+
+/* Form */
+.form {
+  margin-bottom: 10px;
+}
+
+.aggiunta {
+  margin-bottom: 24px;
+  font-size: 0;
+}
+
+.aggiunta input,
+.aggiunta select,
+.aggiunta button {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  margin-right: 8px;
+  margin-bottom: 10px;
+}
+
+#scelta {
+  width: 15%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 12px;
+  border: 1px solid #868585;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+#nuovo-titolo {
+  width: 32%;
+}
+
+#nuovo-regista {
+  width: 24%;
+}
+
+#nuovo-anno {
+  width: 14%;
+}
+
+#nuovo-stato {
+  width: 14%;
+  padding: 10px 8px;
+  border: 1px solid #868585;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+#bottone-aggiungi {
+  width: 10%;
+  margin-right: 0;
+  padding: 10px 0;
+  background-color: white;
+  border: 1px solid #868585;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #000000;
+  text-align: center;
+}
+
+#bottone-aggiungi:hover {
+  background-color: #fd02e8;
+  color: #ffffff;
+}
+
+input {
+  padding: 10px 12px;
+  font-family: inherit;
+  border: 1px solid #868585;
+  border-radius: 8px;
+}
+
+/* Controlli */
+.controlli {
+  margin-bottom: 24px;
+}
+
+.cerca {
+  margin-bottom: 16px;
+}
+
+#cerca {
+  width: 60%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2%;
+}
+
+#ordinamento {
+  width: 36%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 12px;
+  border: 1px solid #868585;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+/* Filtri a pulsante */
+.filtri {
+  margin-bottom: 18px;
+}
+
+.bottone-filtro {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  padding: 8px 18px;
+  background-color: white;
+  border: 1px solid #868585;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #000000;
+}
+
+.bottone-filtro:hover,
+.bottone-filtro.attivo {
+  background-color: #fd02e8;
+  color: #ffffff;
+  border-color: #fd02e8;
+}
+
+/* Statistiche */
+.statistiche {
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.statistiche p {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.barra {
+  width: 100%;
+  height: 12px;
+  background-color: #e4e4e4;
+  border-radius: 6px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.barra-fill {
+  height: 100%;
+  background-color: #fd02e8;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Lista Film */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 14px 4px;
+  border-bottom: 1px solid #b3b3b3;
+  line-height: 24px;
+}
+
+/* film è visto */
+li.film-visto .info-film {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Badge di stato */
+.badge {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.badge-visto {
+  background-color: #28a745;
+}
+
+.badge-da-vedere {
+  background-color: #ff9800;
+}
+
+/* elimina allineato */
+li button.elimina {
+  float: right;
+  font-size: 14px;
+  padding: 4px 10px;
+  background: white;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  border-radius: 6px;
+}
+
+li button.elimina:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+/* footer */
+footer {
+  margin-top: 36px;
+  padding-top: 14px;
+  border-top: 1px solid #e0e0e0;
+  color: #777777;
+  text-align: center;
+}

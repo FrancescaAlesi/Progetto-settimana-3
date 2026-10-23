@@ -2,9 +2,9 @@
 creazione di una pagina web
 
 
-# Pagine & Pellicola - Personal Media Tracker
+# Pellicola - Personal Media Tracker
 
-Pagine & Pellicola  è una pagina web progettata per organizzare la propria collezione personale di intrattenimento. Permette di catalogare libri e film, eliminare contenuti dal catalogo e monitorare statistiche dettagliate sulle proprie abitudini di lettura e visione.
+Pellicola è una pagina web progettata per organizzare la propria collezione personale di intrattenimento. Permette di catalogare libri e film, eliminare contenuti dal catalogo e monitorare statistiche dettagliate sulle proprie abitudini di lettura e visione.
 
 ## Funzionalità Principali
 
