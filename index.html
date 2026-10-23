@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pellicola</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <!-- Titolo dell'app + sottotitolo + button tema chiaro/scuro -->
+            <h1>Pellicola</h1>
+            <h2>Aggiungi i film che hai visto o che vorresti vedere.</h2>
+            <button>Tema chiaro</button>
+            <button>Tema scuro</button>
+        </header>
+
+        <main>
+            <section class="form">
+                <!-- Form di inserimento di nuovi elementi -->
+                <h2>Aggiungi un film</h2>
+                <form>
+                    <input type="text" id="titolo" placeholder="Titolo" required />
+                    <input type="text" id="regista" placeholder="Regista" required />
+
+                    <p>
+                        <input type="number" id="anno" placeholder="Anno" required />
+
+                        <select id="visione">
+                            <option value=""></option>
+                            <option value="Visto">Visto</option>
+                            <option value="Da vadere">Da vedere</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-plus"></i>
+                        <button type="submit">Aggiungi</button>
+                    </p>
+                </form>
+            </section>
+
+            <section class="controlli">
+                <!-- Ricerca live, filtro (select), ordinamento -->
+                <p>
+                    <input type="text" id="cerca" placeholder="Cerca per titolo o regista" />
+                </p>
+                
+                <p>
+                    <select id="visione">
+                        <option value=""></option>
+                        <option value="Tutto">Anno crescente</option>
+                        <option value="Tutto">Anno decrescente</option>
+                        <option value="Visti">Titolo: A-Z </option>
+                        <option value="Da vadere">Titolo: Z-A</option>
+                    </select>
+                </p>
+
+                <div class="filtri">
+      		        <button id="bottone">Tutti</button>
+      		        <button id="bottone">Solo visti</button>
+      		        <button id="bottone">Solo da vedere</button>
+    	        </div>
+                
+            </section>
+
+            <section class="statistiche">
+                <!-- Conteggi e/o barre orizzontali -->
+                <h2>Statistiche</h2>
+      
+                <div>
+                    <div>
+                        <p>Totale: </p>
+                        <p>Libri letti: </p>
+                        <p>Libri da leggere: </p>
+                    </div>
+
+                    <div class="barra">
+                        <div class="barra-fill" style="width: 60%;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lista">
+                <!-- Container che render() ricostruisce a ogni cambio di stato -->
+            </section>
+
+            <div id="notifica"></div>
+        </main>
+
+        <footer>
+            <!-- Autore, anno -->
+            <p>2026 Francesca Alesi - Costruito a mano durante la prima settimana di corso Epicode</p>
+        </footer>
+
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>

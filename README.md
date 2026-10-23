@@ -4,7 +4,7 @@ creazione di una pagina web
 
 # Pagine & Pellicola - Personal Media Tracker
 
- Pagine & Pellicola  è una pagina web progettata per organizzare la propria collezione personale di intrattenimento. Permette di catalogare libri e film, assegnare voti a stelle, eliminare contenuti dal catalogo e monitorare statistiche dettagliate sulle proprie abitudini di lettura e visione.
+Pagine & Pellicola  è una pagina web progettata per organizzare la propria collezione personale di intrattenimento. Permette di catalogare libri e film, eliminare contenuti dal catalogo e monitorare statistiche dettagliate sulle proprie abitudini di lettura e visione.
 
 ## Funzionalità Principali
 
@@ -14,7 +14,7 @@ creazione di una pagina web
 - Pannello Statistiche Laterale:
   - Conteggio totale di libri letti e film visti aggiornato in tempo reale ad ogni aggiunta o rimozione.
   - Calcolo e visualizzazione grafica della media dei voti.
-- Aggiunta Nuovi Elementi: Modulo laterale per inserire titolo, autore/regista, note personali e categoria (`Libri` o `Film`) 
+- Aggiunta Nuovi Elementi: Modulo laterale per inserire titolo, autore/regista, anno, categoria (`Libri` o `Film`), visione(`Visto` o `Da vedere`) e lettura visione(`Letto` o `Da leggere`).
 - Barra di Ricerca Diretta: Cerca all'istante all'interno del catalogo digitando il nome dell'opera o dell'autore.
 
 
